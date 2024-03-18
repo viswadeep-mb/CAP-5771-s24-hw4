@@ -85,9 +85,13 @@ cd /autograder/MAKE-STUDENT-OUTPUT/TEST
 # What if I have multiple files to run?
 rm -f results.json
 
+# should not be needed if there is a requirements.txt
+pip install -r requirements.txt
+
 # Run as many tests as necessary
 #python3 -m pytest test_structure.py
 #python3 test_structure.py
+#
 
 # There is only one folder in git-repo
 #cd /autograder/git-repo/*

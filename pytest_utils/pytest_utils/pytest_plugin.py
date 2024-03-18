@@ -35,6 +35,8 @@ def pytest_terminal_summary(terminalreporter, exitstatus):
     if ('passed' in terminalreporter.stats):
         all_tests = all_tests + terminalreporter.stats['passed']
 
+    #### Where is s.outcome determined?
+
     # First, calculate total scores
     for s in all_tests:
         total_max_score += s.max_score
@@ -59,8 +61,7 @@ def pytest_terminal_summary(terminalreporter, exitstatus):
         """
         #output += f"\nExplanation: {s.explanation!s}"  # str()
 
-        if (s.outcome == 'failed'):
-
+        if True:
             if s.explanation is not None:
                 # print adittional explanation
                 output += f"\nExplanation: {s.explanation!s}"  # str()
@@ -72,6 +73,7 @@ def pytest_terminal_summary(terminalreporter, exitstatus):
                 error_message = str(s.longrepr.reprcrash.message)
                 output += error_message
 
+        if (s.outcome == 'failed'):
             score = 0
             status = 'failed'  # not sure if needed
         elif (s.outcome == 'passed'):
