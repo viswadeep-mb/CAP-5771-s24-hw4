@@ -23,6 +23,7 @@ def question1():
 
 
 # -----------------------------------------------------------
+"""
 def question2():
     answers = {}
 
@@ -39,6 +40,7 @@ def question2():
     answers["(d) explain"] = None
 
     return answers
+"""
 # -----------------------------------------------------------
 def question3():
     answers = {}
@@ -76,36 +78,33 @@ def question7():
 def question8():
     answers = {}
 
-
     # float
-    answers["(a) P(X_1 = 1 | +)"] = None
-    answers["(a) P(X_1 = 1 | -)"] = None
-    answers["(a) P(X_2 = 1 | +)"] = None
-    answers["(a) P(X_2 = 1 | -)"] = None
-    answers["(a) P(X_3 = 1 | +)"] = None
-    answers["(a) P(X_3 = 1 | -)"] = None
-
-    # string
-    answers["(b) label"] = None
-
-    # float
-    answers["(c) P(X_1=1)"] = None
-    answers["(c) P(X_2=1)"] = None
-    answers["(c) P(X_1=1,X_2=1)"] = None
+    answers["(a) P(X_1=1)"] = None
+    answers["(a) P(X_2=1)"] = None
+    answers["(a) P(X_1=1,X_2=1)"] = None
 
     # string: "dependent" or "independent"
-    answers["(c) Relationship between X_1 and X_2"] = None
-
-    # float
-    answers["(d) P(A=1)"] = None
-    answers["(e) P(X_1=1, X_2=1|Class=+)"] = None
-    answers["(e) P(X_1=1|Class=+)"] = None
-    answers["(e) P(X_2=1|Class=+)"] = None
+    answers["(a) Relationship between X_1 and X_2"] = None
 
     # string: "yes" or "no"
-    answers["(e) A and B conditionally independent?"] = None
+    answers["(b) X_1 and X_2 conditionally independent given the class?"] = None
 
     # float
+    answers["(c) P(X_1=1 | +)"] = None
+    answers["(c) P(X_1=1 | -)"] = None
+    answers["(c) P(X_2=1 | +)"] = None
+    answers["(c) P(X_2=1 | -)"] = None
+    answers["(c) P(X_3=1 | +)"] = None
+    answers["(c) P(X_3=1 | -)"] = None
+
+    # For each row give the class predicted by the model after training using Naive Bayes
+    # String: either '+' or '-'
+    answers["(d) Row 1"] = None
+    answers["(d) Row 2"] = None
+    answers["(d) Row 3"] = None
+    answers["(d) Row 4"] = None
+
+    # float between 0 and 1
     answers["(d) Training error rate"] = None
 
     return answers
@@ -141,7 +140,7 @@ def question10():
   
     # type: float
     # note: R is the sample (A=1,B=1,C=1)
-    answers["(b) P(+|R)"] = None  # WRONG
+    answers["(b) P(+|R)"] = None 
     answers["(b) P(R|+)"] = None
     answers["(b) P(R|-)"] = None
 
