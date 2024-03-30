@@ -1491,181 +1491,6 @@ def test_answers_question8_d_PA_1_float(run_compute):
 
 @max_score(20)
 @hide_errors('')
-def test_answers_question8_e_PX_1_1_comma_X_2_1_Class_plus_float(run_compute):
-    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
-    correct_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(e) P(X_1=1, X_2=1|Class=+)' not in correct_answer:
-        explanation = "Key: '(e) P(X_1=1, X_2=1|Class=+)' not found.\n"
-        test_answers_question8_e_PX_1_1_comma_X_2_1_Class_plus_float.explanation = explanation
-        assert False
-    else:
-        correct_answer = correct_answer['(e) P(X_1=1, X_2=1|Class=+)']
-    student_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(e) P(X_1=1, X_2=1|Class=+)' not in student_answer:
-        explanation = "Key: '(e) P(X_1=1, X_2=1|Class=+)' not found.\n"
-        test_answers_question8_e_PX_1_1_comma_X_2_1_Class_plus_float.explanation = explanation
-        assert False
-    else:
-        student_answer = student_answer['(e) P(X_1=1, X_2=1|Class=+)']
-    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
-    tol = 0.001
-    keys = None
-    msg_structure = "assert_utilities.check_structure_float(student_answer, instructor_answer)"
-    msg_answer = "assert_utilities.check_answer_float(student_answer, instructor_answer, rel_tol)"
-    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
-    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
-    if is_success:
-        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
-    else: 
-        explanation_answer = "" 
-    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
-    test_answers_question8_e_PX_1_1_comma_X_2_1_Class_plus_float.explanation = explanation
-    assert is_success
-
-
-
-@max_score(20)
-@hide_errors('')
-def test_answers_question8_e_PX_1_1_Class_plus_float(run_compute):
-    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
-    correct_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(e) P(X_1=1|Class=+)' not in correct_answer:
-        explanation = "Key: '(e) P(X_1=1|Class=+)' not found.\n"
-        test_answers_question8_e_PX_1_1_Class_plus_float.explanation = explanation
-        assert False
-    else:
-        correct_answer = correct_answer['(e) P(X_1=1|Class=+)']
-    student_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(e) P(X_1=1|Class=+)' not in student_answer:
-        explanation = "Key: '(e) P(X_1=1|Class=+)' not found.\n"
-        test_answers_question8_e_PX_1_1_Class_plus_float.explanation = explanation
-        assert False
-    else:
-        student_answer = student_answer['(e) P(X_1=1|Class=+)']
-    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
-    tol = 0.001
-    keys = None
-    msg_structure = "assert_utilities.check_structure_float(student_answer, instructor_answer)"
-    msg_answer = "assert_utilities.check_answer_float(student_answer, instructor_answer, rel_tol)"
-    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
-    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
-    if is_success:
-        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
-    else: 
-        explanation_answer = "" 
-    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
-    test_answers_question8_e_PX_1_1_Class_plus_float.explanation = explanation
-    assert is_success
-
-
-
-@max_score(20)
-@hide_errors('')
-def test_answers_question8_e_PX_2_1_Class_plus_float(run_compute):
-    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
-    correct_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(e) P(X_2=1|Class=+)' not in correct_answer:
-        explanation = "Key: '(e) P(X_2=1|Class=+)' not found.\n"
-        test_answers_question8_e_PX_2_1_Class_plus_float.explanation = explanation
-        assert False
-    else:
-        correct_answer = correct_answer['(e) P(X_2=1|Class=+)']
-    student_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(e) P(X_2=1|Class=+)' not in student_answer:
-        explanation = "Key: '(e) P(X_2=1|Class=+)' not found.\n"
-        test_answers_question8_e_PX_2_1_Class_plus_float.explanation = explanation
-        assert False
-    else:
-        student_answer = student_answer['(e) P(X_2=1|Class=+)']
-    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
-    tol = 0.001
-    keys = None
-    msg_structure = "assert_utilities.check_structure_float(student_answer, instructor_answer)"
-    msg_answer = "assert_utilities.check_answer_float(student_answer, instructor_answer, rel_tol)"
-    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
-    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
-    if is_success:
-        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
-    else: 
-        explanation_answer = "" 
-    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
-    test_answers_question8_e_PX_2_1_Class_plus_float.explanation = explanation
-    assert is_success
-
-
-
-@max_score(20)
-@hide_errors('')
-def test_answers_question8_e_A_and_B_conditionally_independent_string(run_compute):
-    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
-    correct_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(e) A and B conditionally independent' not in correct_answer:
-        explanation = "Key: '(e) A and B conditionally independent' not found.\n"
-        test_answers_question8_e_A_and_B_conditionally_independent_string.explanation = explanation
-        assert False
-    else:
-        correct_answer = correct_answer['(e) A and B conditionally independent']
-    student_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(e) A and B conditionally independent' not in student_answer:
-        explanation = "Key: '(e) A and B conditionally independent' not found.\n"
-        test_answers_question8_e_A_and_B_conditionally_independent_string.explanation = explanation
-        assert False
-    else:
-        student_answer = student_answer['(e) A and B conditionally independent']
-    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
-    tol = 0.001
-    keys = None
-    msg_structure = "assert_utilities.check_structure_string(student_answer, instructor_answer)"
-    msg_answer = "assert_utilities.check_answer_string(student_answer, instructor_answer)"
-    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
-    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
-    if is_success:
-        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
-    else: 
-        explanation_answer = "" 
-    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
-    test_answers_question8_e_A_and_B_conditionally_independent_string.explanation = explanation
-    assert is_success
-
-
-
-@max_score(20)
-@hide_errors('')
-def test_answers_question8_d_Training_error_rate_float(run_compute):
-    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
-    correct_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(d) Training error rate' not in correct_answer:
-        explanation = "Key: '(d) Training error rate' not found.\n"
-        test_answers_question8_d_Training_error_rate_float.explanation = explanation
-        assert False
-    else:
-        correct_answer = correct_answer['(d) Training error rate']
-    student_answer = run_compute('all_questions', 'question8', 'i', **kwargs)
-    if '(d) Training error rate' not in student_answer:
-        explanation = "Key: '(d) Training error rate' not found.\n"
-        test_answers_question8_d_Training_error_rate_float.explanation = explanation
-        assert False
-    else:
-        student_answer = student_answer['(d) Training error rate']
-    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
-    tol = 0.001
-    keys = None
-    msg_structure = "assert_utilities.check_structure_float(student_answer, instructor_answer)"
-    msg_answer = "assert_utilities.check_answer_float(student_answer, instructor_answer, rel_tol)"
-    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
-    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
-    if is_success:
-        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
-    else: 
-        explanation_answer = "" 
-    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
-    test_answers_question8_d_Training_error_rate_float.explanation = explanation
-    assert is_success
-
-
-
-@max_score(20)
-@hide_errors('')
 def test_answers_question9_a_K_int(run_compute):
     kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
     correct_answer = run_compute('all_questions', 'question9', 'i', **kwargs)
@@ -2500,6 +2325,181 @@ def test_answers_question10_d_A_independent_of_B_ques_string(run_compute):
         explanation_answer = "" 
     explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
     test_answers_question10_d_A_independent_of_B_ques_string.explanation = explanation
+    assert is_success
+
+
+
+@max_score(20)
+@hide_errors('')
+def test_answers_question10_e_PA_1_comma_B_1_plus_float(run_compute):
+    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
+    correct_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) P(A=1,B=1|+)' not in correct_answer:
+        explanation = "Key: '(e) P(A=1,B=1|+)' not found.\n"
+        test_answers_question10_e_PA_1_comma_B_1_plus_float.explanation = explanation
+        assert False
+    else:
+        correct_answer = correct_answer['(e) P(A=1,B=1|+)']
+    student_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) P(A=1,B=1|+)' not in student_answer:
+        explanation = "Key: '(e) P(A=1,B=1|+)' not found.\n"
+        test_answers_question10_e_PA_1_comma_B_1_plus_float.explanation = explanation
+        assert False
+    else:
+        student_answer = student_answer['(e) P(A=1,B=1|+)']
+    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
+    tol = 0.001
+    keys = None
+    msg_structure = "assert_utilities.check_structure_float(student_answer, instructor_answer)"
+    msg_answer = "assert_utilities.check_answer_float(student_answer, instructor_answer, rel_tol)"
+    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
+    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
+    if is_success:
+        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
+    else: 
+        explanation_answer = "" 
+    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
+    test_answers_question10_e_PA_1_comma_B_1_plus_float.explanation = explanation
+    assert is_success
+
+
+
+@max_score(20)
+@hide_errors('')
+def test_answers_question10_e_PA_1_plus_float(run_compute):
+    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
+    correct_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) P(A=1|+)' not in correct_answer:
+        explanation = "Key: '(e) P(A=1|+)' not found.\n"
+        test_answers_question10_e_PA_1_plus_float.explanation = explanation
+        assert False
+    else:
+        correct_answer = correct_answer['(e) P(A=1|+)']
+    student_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) P(A=1|+)' not in student_answer:
+        explanation = "Key: '(e) P(A=1|+)' not found.\n"
+        test_answers_question10_e_PA_1_plus_float.explanation = explanation
+        assert False
+    else:
+        student_answer = student_answer['(e) P(A=1|+)']
+    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
+    tol = 0.001
+    keys = None
+    msg_structure = "assert_utilities.check_structure_float(student_answer, instructor_answer)"
+    msg_answer = "assert_utilities.check_answer_float(student_answer, instructor_answer, rel_tol)"
+    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
+    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
+    if is_success:
+        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
+    else: 
+        explanation_answer = "" 
+    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
+    test_answers_question10_e_PA_1_plus_float.explanation = explanation
+    assert is_success
+
+
+
+@max_score(20)
+@hide_errors('')
+def test_answers_question10_e_PB_1_plus_float(run_compute):
+    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
+    correct_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) P(B=1|+)' not in correct_answer:
+        explanation = "Key: '(e) P(B=1|+)' not found.\n"
+        test_answers_question10_e_PB_1_plus_float.explanation = explanation
+        assert False
+    else:
+        correct_answer = correct_answer['(e) P(B=1|+)']
+    student_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) P(B=1|+)' not in student_answer:
+        explanation = "Key: '(e) P(B=1|+)' not found.\n"
+        test_answers_question10_e_PB_1_plus_float.explanation = explanation
+        assert False
+    else:
+        student_answer = student_answer['(e) P(B=1|+)']
+    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
+    tol = 0.001
+    keys = None
+    msg_structure = "assert_utilities.check_structure_float(student_answer, instructor_answer)"
+    msg_answer = "assert_utilities.check_answer_float(student_answer, instructor_answer, rel_tol)"
+    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
+    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
+    if is_success:
+        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
+    else: 
+        explanation_answer = "" 
+    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
+    test_answers_question10_e_PB_1_plus_float.explanation = explanation
+    assert is_success
+
+
+
+@max_score(20)
+@hide_errors('')
+def test_answers_question10_e_A_independent_of_B_given_class_plus_ques_string(run_compute):
+    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
+    correct_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) A independent of B given class +?' not in correct_answer:
+        explanation = "Key: '(e) A independent of B given class +?' not found.\n"
+        test_answers_question10_e_A_independent_of_B_given_class_plus_ques_string.explanation = explanation
+        assert False
+    else:
+        correct_answer = correct_answer['(e) A independent of B given class +?']
+    student_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) A independent of B given class +?' not in student_answer:
+        explanation = "Key: '(e) A independent of B given class +?' not found.\n"
+        test_answers_question10_e_A_independent_of_B_given_class_plus_ques_string.explanation = explanation
+        assert False
+    else:
+        student_answer = student_answer['(e) A independent of B given class +?']
+    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
+    tol = 0.001
+    keys = None
+    msg_structure = "assert_utilities.check_structure_string(student_answer, instructor_answer)"
+    msg_answer = "assert_utilities.check_answer_string(student_answer, instructor_answer)"
+    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
+    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
+    if is_success:
+        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
+    else: 
+        explanation_answer = "" 
+    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
+    test_answers_question10_e_A_independent_of_B_given_class_plus_ques_string.explanation = explanation
+    assert is_success
+
+
+
+@max_score(20)
+@hide_errors('')
+def test_answers_question10_e_A_and_B_conditionally_independent_given_class_plus_comma_explain_explain_string(run_compute):
+    kwargs = {'student_directory': 'student_code_with_answers' , 'instructor_directory': 'instructor_code_with_answers'}
+    correct_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) A and B conditionally independent given class +, explain' not in correct_answer:
+        explanation = "Key: '(e) A and B conditionally independent given class +, explain' not found.\n"
+        test_answers_question10_e_A_and_B_conditionally_independent_given_class_plus_comma_explain_explain_string.explanation = explanation
+        assert False
+    else:
+        correct_answer = correct_answer['(e) A and B conditionally independent given class +, explain']
+    student_answer = run_compute('all_questions', 'question10', 'i', **kwargs)
+    if '(e) A and B conditionally independent given class +, explain' not in student_answer:
+        explanation = "Key: '(e) A and B conditionally independent given class +, explain' not found.\n"
+        test_answers_question10_e_A_and_B_conditionally_independent_given_class_plus_comma_explain_explain_string.explanation = explanation
+        assert False
+    else:
+        student_answer = student_answer['(e) A and B conditionally independent given class +, explain']
+    print(f'is_fixture=True, is_student_file=True, is_instructor_file=True')
+    tol = 0.001
+    keys = None
+    msg_structure = "assert_utilities.check_structure_explain_string(student_answer, instructor_answer)"
+    msg_answer = "assert_utilities.check_answer_explain_string(student_answer, instructor_answer)"
+    local_namespace={'array': np.array, 'assert_utilities': assert_utilities, 'student_answer': student_answer, 'instructor_answer': correct_answer, 'rel_tol':tol, 'keys':keys}
+    is_success, explanation_structure = eval(msg_structure, {'__builtins__':{}}, local_namespace)
+    if is_success:
+        is_success, explanation_answer    = eval(msg_answer,    {'__builtins__':{}}, local_namespace)
+    else: 
+        explanation_answer = "" 
+    explanation = '\n'.join(['Structure tests:', explanation_structure, 'Answer tests:', explanation_answer])
+    test_answers_question10_e_A_and_B_conditionally_independent_given_class_plus_comma_explain_explain_string.explanation = explanation
     assert is_success
 
 
