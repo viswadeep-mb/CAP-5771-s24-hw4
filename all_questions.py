@@ -99,13 +99,13 @@ def question8():
 
     # For each row give the class predicted by the model after training using Naive Bayes
     # String: either '+' or '-'
-    answers["(d) Row 1"] = ""
-    answers["(d) Row 2"] = ""
-    answers["(d) Row 3"] = ""
-    answers["(d) Row 4"] = ""
-
+    answers["(d) Row 1"] = '+'
+    answers["(d) Row 2"] = '-'
+    answers["(d) Row 3"] = '-'
+    answers["(d) Row 4"] = '-'
+    
     # float between 0 and 1
-    answers["(d) Training error rate"] = 0.0
+    answers["(d) Training error rate"] = 0.25
 
     return answers
 
@@ -115,11 +115,11 @@ def question9():
 
     # int
     answers["(a) K"] = 5
-    answers["(b) K"] = 50
+    answers["(b) K"] = 5
 
     # explain_string
-    answers["(a) explain"] = "The choice of k=5 strikes a balance between generalization and sensitivity to local data structure by considering multiple neighbors. This approach helps to reduce the impact of noise and outliers while being less susceptible to random fluctuations compared to k=1. Moreover, k=5 avoids oversmoothing the local class information, a pitfall that can occur with larger values such as k=50"
-    answers["(b) explain"] = "In cases where there is significant overlap between classes, opting for a larger value of k could be advantageous. This choice would lessen the reliance on immediate neighbors, which might be misleading due to the overlap. By considering a larger number of neighbors, a more stable decision boundary could be achieved in regions where classes blend together."
+    answers["(a) explain"] = "choosing k=5 achieves a favorable equilibrium. It effectively mitigates noise and outliers while retaining significant local detail, unlike the overly simplistic approach of k=1. Additionally, k=5 prevents excessive smoothing, a risk associated with larger k values such as k=50."
+    answers["(b) explain"] = "Given the overlap between data categories, employing a large k value like 50 is unnecessary. Doing so may introduce errors, and the resultant over-smoothing effect could diminish the ability to distinguish between classes, particularly in densely populated class regions."
 
     return answers
 
@@ -136,19 +136,19 @@ def question10():
     answers["(a) P(C=1|-)"] = 0.2
 
     # type: explanatory string
-    answers["(a) P(A=1|+) explain your answer"] = ""
+    answers["(a) P(A=1|+) explain your answer"] = "P(A=1,+) = 3 , P(+) = 5 so P(A=1|+) is 0.6"
   
     # type: float
     # note: R is the sample (A=1,B=1,C=1)
-    answers["(b) P(+|R)"] = 0.0 
-    answers["(b) P(R|+)"] = 0.0
+    answers["(b) P(+|R)"] = 1.0 
+    answers["(b) P(R|+)"] = 0.2
     answers["(b) P(R|-)"] = 0.0
 
     # string, '+' or '-'
     answers["(b) class label"] = "+"
 
     # explain_string
-    answers["(b) Explain your reasoning"] = ""
+    answers["(b) Explain your reasoning"] = "Naive Bayes of P(A=1|+)* P(B=1|+)* P(C=1|+) is 0.192 whereas for P(A=1|-)* P(B=1|-)* P(C=1|-) it is 0.032"
   
     # float
     answers["(c) P(A=1)"] = 0.5
@@ -175,7 +175,7 @@ def question10():
     answers["(e) A independent of B given class +?"] = "no"
 
     # type: explanatory string
-    answers["(e) A and B conditionally independent given class +, explain"] =  ""
+    answers["(e) A and B conditionally independent given class +, explain"] =  "no, P(A=1|B=1+) is not equal to P(A=1|+)"
   
     return answers
 
