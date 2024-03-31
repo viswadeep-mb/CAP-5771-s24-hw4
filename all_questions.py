@@ -8,16 +8,16 @@ def question1():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
-    answers["(d)"] = None
+    answers["(a)"] = "no"
+    answers["(b)"] = "no"
+    answers["(c)"] = "yes"
+    answers["(d)"] = "yes"
 
     # explain-string: explanation in english prose
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
-    answers["(c) explain"] = None
-    answers["(d) explain"] = None
+    answers["(a) explain"] = "The rules don't operate entirely independently. For example, Rule 7 and Rule 2 present conflicting outcomes for individuals who are single and don't own homes"
+    answers["(b) explain"] = "The rule set is not exhaustive. Let's say we have a new entry where the individual is a homeowner, divorced, with low annual income, and currently unemployed. None of the existing rules can generate this scenario."
+    answers["(c) explain"] = "Ordering might be crucialfor this rule set to prioritize more specific rules over general ones. For instance, applying Rule 7 before Rule 2 helps accurately classify single individuals who are not homeowners."
+    answers["(d) explain"] = "Having a default class could be necessary for cases where none of the rules apply. This default class acts as a fallback classification when the specified conditions are not met, providing a safety net."
 
     return answers
 
@@ -46,16 +46,14 @@ def question3():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
+    answers["(a)"] = "yes"
+    answers["(b)"] = "no"
+    answers["(c)"] = "no"
 
     # explain-string: explanation in english prose
-    answers["(a) example"] = None
-    answers["(b) example"] = None
-    answers["(c) example"] = None
-
-    return answers
+    answers["(a) example"] = "In order to ensure that the rules are mutually exclusive, it's important to have no overlap between the conditions. They seem mutually exclusive as they classify distinct groups such as birds, fishes, mammals, and reptiles, each based on unique combinations of attributes."
+    answers["(b) example"] = "The absence of a rule covering amphibians means that under the provided rules, a salamander wouldn't be classified. This highlights that the rules aren't exhaustive since they fail to classify every vertebrate in the dataset."
+    answers["(c) example"] = "Since each rule assigns a distinct group without any overlap, the order in which they're applied won't change the classification outcome. As a result, there's no need to concern oneself with the sequence of these rules."
 # -----------------------------------------------------------
 def question7():
     answers = {}
